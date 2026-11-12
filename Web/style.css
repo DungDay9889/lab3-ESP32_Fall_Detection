@@ -1,0 +1,15 @@
+*{box-sizing:border-box}body{margin:0;background:#f3f6fb;color:#182235;font-family:Arial,Helvetica,sans-serif}
+.container{max-width:1100px;margin:32px auto;padding:0 20px}header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}
+.eyebrow{font-size:11px;letter-spacing:2px;font-weight:700;color:#64748b}h1{font-size:30px;margin:8px 0}.sub,.muted{color:#64748b}
+.pill{padding:10px 15px;border-radius:20px;font-weight:700;font-size:13px}.online{background:#dcfce7;color:#166534}.offline{background:#fee2e2;color:#991b1b}
+.status-panel{background:#14213d;color:white;border-radius:16px;padding:22px 26px;display:flex;justify-content:space-between;align-items:center}
+.status-panel h2{margin:8px 0 0;font-size:24px}.status-icon{font-size:38px;color:#4ade80}.alert .status-icon{color:#fb7185}
+.section-title{font-size:18px;margin:28px 0 14px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.metric,.chart-card,.control-card{background:white;border:1px solid #e5eaf2;border-radius:14px;padding:18px;box-shadow:0 4px 16px #17255408}
+.metric span{display:block;color:#64748b;font-size:13px}.metric strong{display:inline-block;font-size:30px;margin-top:12px}.metric small{color:#64748b;margin-left:6px}
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:14px}.chart-card h3,.control-card h3{margin:0 0 12px;font-size:15px}.chart-card canvas{width:100%;max-height:260px}
+.controls{display:grid;grid-template-columns:1fr 1fr;gap:14px}.control-card{display:flex;align-items:center;justify-content:space-between;gap:12px}.control-card p{color:#64748b;margin:0;font-size:13px}
+button{border:0;border-radius:9px;padding:12px 17px;font-weight:700;cursor:pointer;color:white;min-width:112px}.on{background:#15803d}.off{background:#475569}button:disabled{opacity:.5;cursor:not-allowed}
+footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#64748b;font-size:12px;margin:24px 0}
+code{background:#e8edf5;padding:3px 6px;border-radius:5px}
+@media(max-width:700px){header{align-items:flex-start;flex-direction:column}.grid{grid-template-columns:repeat(2,1fr)}.charts,.controls{grid-template-columns:1fr}.container{margin:18px auto}.metric strong{font-size:25px}}

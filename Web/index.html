@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giám sát phát hiện té ngã - ESP32</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div>
+        <p class="eyebrow">IOT • ESP32 • MPU6050 • FREERTOS</p>
+        <h1>Hệ thống giám sát té ngã</h1>
+        <p class="sub">Dữ liệu cảm biến nhận trực tiếp từ MQTT Broker</p>
+      </div>
+      <div id="connection" class="pill offline">Đang kết nối...</div>
+    </header>
+
+    <section class="status-panel">
+      <div>
+        <span class="muted">Trạng thái hệ thống</span>
+        <h2 id="fallStatus">Chưa có dữ liệu</h2>
+      </div>
+      <div class="status-icon" id="statusIcon">●</div>
+    </section>
+
+    <h2 class="section-title">Thông số cảm biến</h2>
+    <section class="grid">
+      <article class="metric"><span>Gia tốc X</span><strong id="ax">--</strong><small>g</small></article>
+      <article class="metric"><span>Gia tốc Y</span><strong id="ay">--</strong><small>g</small></article>
+      <article class="metric"><span>Gia tốc Z</span><strong id="az">--</strong><small>g</small></article>
+      <article class="metric"><span>Gia tốc tổng hợp</span><strong id="acc">--</strong><small>g</small></article>
+      <article class="metric"><span>Roll</span><strong id="roll">--</strong><small>độ</small></article>
+      <article class="metric"><span>Pitch</span><strong id="pitch">--</strong><small>độ</small></article>
+    </section>
+
+    <h2 class="section-title">Biểu đồ thời gian thực</h2>
+    <section class="charts">
+      <article class="chart-card"><h3>Gia tốc (g)</h3><canvas id="accChart"></canvas></article>
+      <article class="chart-card"><h3>Góc nghiêng (độ)</h3><canvas id="angleChart"></canvas></article>
+    </section>
+
+    <h2 class="section-title">Điều khiển thủ công</h2>
+    <section class="controls">
+      <article class="control-card">
+        <div><h3>Đèn LED</h3><p id="ledState">Đang tắt</p></div>
+        <button id="ledBtn" class="off">BẬT LED</button>
+      </article>
+      <article class="control-card">
+        <div><h3>Còi cảnh báo</h3><p id="buzzerState">Đang tắt</p></div>
+        <button id="buzzerBtn" class="off">BẬT CÒI</button>
+      </article>
+    </section>
+
+    <footer>
+      <span id="lastUpdate">Chưa nhận dữ liệu</span>
+      <span>Topic: <code id="topicLabel"></code></span>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

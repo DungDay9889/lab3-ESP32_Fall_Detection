@@ -1,0 +1,4 @@
+ESP32 DevKit V1
+MPU6050: VCC->3V3, GND->GND, SDA->GPIO21, SCL->GPIO22
+LED: GPIO2 -> 220 ohm resistor -> LED anode; LED cathode -> GND
+Buzzer: buzzer + -> GPIO25; buzzer - -> GND
