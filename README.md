@@ -13,9 +13,9 @@
 | MPU6050 | GND | GND |
 | MPU6050 | SDA | GPIO 21 |
 | MPU6050 | SCL | GPIO 22 |
-| LED (qua điện trở 220Ω) | Anode | GPIO 2 |
+| LED (qua điện trở 220Ω) | Anode | GPIO 18 |
 | LED | Cathode | GND |
-| Buzzer | + | GPIO 25 |
+| Buzzer | + | GPIO 16 |
 | Buzzer | - | GND |
 
 ## Cài thư viện Arduino IDE
